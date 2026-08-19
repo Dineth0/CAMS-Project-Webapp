@@ -5,7 +5,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { 
   LayoutDashboard, Users, Calendar, Settings, 
-  LogOut, Menu, X, ShieldCheck, ChevronRight 
+  LogOut, Menu, X, ShieldCheck, ChevronRight, 
+  User
 } from "lucide-react";
 import { useUser } from "@/context/UserContext";
 
@@ -53,7 +54,7 @@ export default function AdminLayout({
           </div>
           <button 
             onClick={() => setSidebarOpen(false)}
-            className="lg:hidden text-slate-400 hover:text-slate-200 transition-colors"
+            className="lg:hidden cursor-pointer text-slate-400 hover:text-slate-200 transition-colors"
           >
             <X className="w-5 h-5" />
           </button>
@@ -69,7 +70,7 @@ export default function AdminLayout({
                 key={item.href}
                 href={item.href}
                 onClick={() => setSidebarOpen(false)}
-                className={`flex items-center justify-between px-4 py-3 rounded-xl text-sm font-semibold transition-all ${
+                className={`flex cursor-pointer items-center justify-between px-4 py-3 rounded-xl text-sm font-semibold transition-all ${
                   isActive 
                     ? "bg-emerald-600 text-white shadow-lg shadow-emerald-900/30" 
                     : "text-slate-400 hover:bg-slate-800/60 hover:text-slate-200"
@@ -89,7 +90,7 @@ export default function AdminLayout({
         <div className="p-4 border-t border-slate-800 bg-slate-900/50">
           <button 
             onClick={() => console.log("Logging out...")}
-            className="w-full flex items-center space-x-3 px-4 py-3 rounded-xl text-sm font-semibold text-rose-400 hover:bg-rose-500/10 hover:text-rose-300 transition-all"
+            className="w-full flex cursor-pointer items-center space-x-3 px-4 py-3 rounded-xl text-sm font-semibold text-rose-400 hover:bg-rose-500/10 hover:text-rose-300 transition-all"
           >
             <LogOut className="w-5 h-5" />
             <span>Logout</span>
@@ -106,7 +107,7 @@ export default function AdminLayout({
             {/* Mobile Menu Toggle Button */}
             <button 
               onClick={() => setSidebarOpen(true)}
-              className="lg:hidden p-2 rounded-xl bg-slate-800 text-slate-300 hover:bg-slate-700 transition-colors border border-slate-700/60"
+              className="lg:hidden p-2 cursor-pointer rounded-xl bg-slate-800 text-slate-300 hover:bg-slate-700 transition-colors border border-slate-700/60"
             >
               <Menu className="w-5 h-5" />
             </button>

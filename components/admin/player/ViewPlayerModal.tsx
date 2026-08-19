@@ -35,7 +35,7 @@ export default function ViewPlayerModal({ isOpen, onClose, player }: ViewPlayerM
           </div>
           <button 
             onClick={onClose}
-            className="p-2 text-slate-400 hover:text-rose-400 hover:bg-rose-500/10 rounded-xl transition-colors"
+            className="p-2 text-slate-400 cursor-pointer hover:text-rose-400 hover:bg-rose-500/10 rounded-xl transition-colors"
           >
             <X className="w-5 h-5" />
           </button>
@@ -139,7 +139,7 @@ export default function ViewPlayerModal({ isOpen, onClose, player }: ViewPlayerM
         <div className="p-4 border-t border-slate-800 bg-slate-950/40 flex justify-end">
           <button
             onClick={onClose}
-            className="px-5 py-2 text-sm font-bold text-slate-300 bg-slate-800 hover:bg-slate-700 rounded-xl transition-colors"
+            className="px-5 py-2 text-sm cursor-pointer font-bold text-slate-300 bg-slate-800 hover:bg-slate-700 rounded-xl transition-colors"
           >
             Close
           </button>

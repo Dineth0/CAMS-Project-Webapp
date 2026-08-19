@@ -44,7 +44,7 @@ function CustomSelect({
         type="button"
         disabled={disabled}
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full rounded-xl cursor-pointer px-4 py-2.5 text-sm flex items-center justify-between transition-all disabled:opacity-50 disabled:cursor-not-allowed bg-slate-50 text-slate-900 border border-slate-200 hover:border-emerald-500 focus:ring-4 focus:ring-emerald-500/10 shadow-sm"
+        className="w-full rounded-xl  cursor-pointer px-4 py-2.5 text-sm flex items-center justify-between transition-all disabled:opacity-50 disabled:cursor-not-allowed bg-slate-50 text-slate-900 border border-slate-200 hover:border-emerald-500 focus:ring-4 focus:ring-emerald-500/10 shadow-sm"
       >
         <span className="truncate font-medium">{selectedOption?.label || "Select an option"}</span>
         <ChevronDown
@@ -86,6 +86,8 @@ export default function EditPlayerProfileModal({
   userEmail,
   onUpdateSuccess,
 }: EditPlayerProfileModalProps) {
+  const API_GATEWAY = process.env.NEXT_PUBLIC_API_GATEWAY_URL || "http://localhost:7000";
+
   const [isLoading, setIsLoading] = useState(false);
   const [isSaving, setIsSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -149,7 +151,7 @@ export default function EditPlayerProfileModal({
             
             if (data.image) {
               const formattedPath = data.image.replace(/\\/g, "/");
-              setPreviewImage(`http://localhost:7000/${formattedPath}`);
+              setPreviewImage(`${API_GATEWAY}/${formattedPath}`);
             }
           } else {
             setError("Failed to load profile data.");
@@ -414,7 +416,7 @@ export default function EditPlayerProfileModal({
             type="button"
             onClick={onClose}
             disabled={isSaving || isLoading}
-            className="px-5 py-2.5 text-sm font-bold text-slate-600 bg-white border border-slate-200 rounded-xl hover:bg-slate-50 focus:outline-none transition-all disabled:opacity-50"
+            className="px-5 py-2.5 text-sm font-bold cursor-pointer text-slate-600 bg-white border border-slate-200 rounded-xl hover:bg-slate-50 focus:outline-none transition-all disabled:opacity-50"
           >
             Cancel
           </button>
@@ -422,7 +424,7 @@ export default function EditPlayerProfileModal({
             type="button" 
             onClick={handleSubmit} 
             disabled={isSaving || isLoading}
-            className="px-6 py-2.5 text-sm font-bold text-white bg-emerald-600 rounded-xl hover:bg-emerald-700 focus:outline-none focus:ring-4 focus:ring-emerald-500/20 transition-all shadow-md shadow-emerald-600/20 disabled:opacity-70 flex items-center gap-2"
+            className="px-6 py-2.5 text-sm font-bold cursor-pointer text-white bg-emerald-600 rounded-xl hover:bg-emerald-700 focus:outline-none focus:ring-4 focus:ring-emerald-500/20 transition-all shadow-md shadow-emerald-600/20 disabled:opacity-70 flex items-center gap-2"
           >
             {isSaving ? (
               <><Loader2 className="w-4 h-4 animate-spin" /> Saving...</>

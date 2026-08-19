@@ -157,14 +157,14 @@ export default function MobileResponsiveDashboardLight() {
                 <div className="relative" ref={dropdownRef}>
                   <button 
                     onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                    className="flex items-center gap-3 bg-white hover:bg-slate-50 px-3 py-1.5 rounded-2xl border border-slate-200 shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
+                    className="flex items-center cursor-pointer gap-3 bg-white hover:bg-slate-50 px-3 py-1.5 rounded-2xl border border-slate-200 shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-emerald-500/20"
                   >
                     <div className="text-right hidden sm:block">
                       <p className="text-sm font-bold text-slate-800 leading-none">{currentUser.userName}</p>
                       <p className="text-[10px] font-bold text-emerald-600 mt-1 uppercase tracking-wider">{currentUser.role}</p>
                     </div>
                     
-                    <div className="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-700 font-black shadow-inner border border-emerald-200 overflow-hidden shrink-0">
+                    <div className="w-10 h-10 cursor-pointer rounded-full bg-emerald-100 flex items-center justify-center text-emerald-700 font-black shadow-inner border border-emerald-200 overflow-hidden shrink-0">
                       {currentUser.role === "PLAYER" && playerImage ? (
                         <img 
                           src={playerImage} 
@@ -191,7 +191,7 @@ export default function MobileResponsiveDashboardLight() {
                             setIsDropdownOpen(false);
                             setIsEditProfileOpen(true);
                           }}
-                          className="w-full flex items-center gap-3 px-4 py-3.5 text-sm font-bold text-slate-700 hover:bg-emerald-50 hover:text-emerald-700 transition-colors"
+                          className="w-full cursor-pointer flex items-center gap-3 px-4 py-3.5 text-sm font-bold text-slate-700 hover:bg-emerald-50 hover:text-emerald-700 transition-colors"
                         >
                           <UserCog className="w-4 h-4" /> Edit Player Profile
                         </button>
@@ -199,7 +199,7 @@ export default function MobileResponsiveDashboardLight() {
                       
                       <button 
                         onClick={handleLogout}
-                        className="w-full flex items-center gap-3 px-4 py-3.5 text-sm font-bold text-rose-600 hover:bg-rose-50 transition-colors border-t border-slate-100"
+                        className="w-full flex items-center cursor-pointer gap-3 px-4 py-3.5 text-sm font-bold text-rose-600 hover:bg-rose-50 transition-colors border-t border-slate-100"
                       >
                         <LogOut className="w-4 h-4" /> Log Out
                       </button>
@@ -239,7 +239,7 @@ export default function MobileResponsiveDashboardLight() {
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab as any)}
-                className={`px-5 py-2 text-sm font-bold rounded-lg transition-all duration-300 ${
+                className={`px-5 py-2 text-sm cursor-pointer font-bold rounded-lg transition-all duration-300 ${
                   activeTab === tab 
                     ? "bg-emerald-600 text-white shadow-md shadow-emerald-600/20" 
                     : "text-slate-600 hover:text-slate-900 hover:bg-slate-100"

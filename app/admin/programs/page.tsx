@@ -161,7 +161,7 @@ export default function TrainingProgram() {
 
         <button 
           onClick={handleAddNew} 
-          className="flex items-center justify-center w-full sm:w-auto px-5 py-2.5 bg-emerald-600 text-white rounded-xl text-sm font-bold hover:bg-emerald-500 shadow-lg shadow-emerald-900/20 transition-all shrink-0"
+          className="flex items-center cursor-pointer justify-center w-full sm:w-auto px-5 py-2.5 bg-emerald-600 text-white rounded-xl text-sm font-bold hover:bg-emerald-500 shadow-lg shadow-emerald-900/20 transition-all shrink-0"
         >
           <Plus className="w-4 h-4 mr-2" />
           Add New Program
@@ -241,7 +241,7 @@ export default function TrainingProgram() {
                         {/* Edit Button */}
                         <button 
                           onClick={() => handleEdit(program)}
-                          className="p-2 text-slate-400 hover:text-blue-400 hover:bg-blue-500/10 rounded-lg transition-colors" 
+                          className="p-2 cursor-pointer text-slate-400 hover:text-blue-400 hover:bg-blue-500/10 rounded-lg transition-colors" 
                           title="Edit"
                         >
                           <Edit className="w-4 h-4" />
@@ -249,12 +249,12 @@ export default function TrainingProgram() {
                         {/* Delete Button */}
                         <button 
                           onClick={() => confirmDelete(program.trainingProgramId)}
-                          className="p-2 text-slate-400 hover:text-rose-400 hover:bg-rose-500/10 rounded-lg transition-colors" 
+                          className="p-2 cursor-pointer text-slate-400 hover:text-rose-400 hover:bg-rose-500/10 rounded-lg transition-colors" 
                           title="Delete"
                         >
                           <Trash2 className="w-4 h-4" />
                         </button>
-                        <button className="p-2 text-slate-400 hover:text-slate-200 hover:bg-slate-800 rounded-lg transition-colors">
+                        <button className="p-2 cursor-pointer text-slate-400 hover:text-slate-200 hover:bg-slate-800 rounded-lg transition-colors">
                           <MoreVertical className="w-4 h-4" />
                         </button>
                       </div>
@@ -277,7 +277,7 @@ export default function TrainingProgram() {
               <button 
                 onClick={() => paginate(currentPage - 1)}
                 disabled={currentPage === 1}
-                className="px-3 py-1.5 border border-slate-700 rounded-lg bg-slate-900 hover:bg-slate-800 disabled:opacity-50 text-slate-300 transition-colors"
+                className="px-3 py-1.5 cursor-pointer border border-slate-700 rounded-lg bg-slate-900 hover:bg-slate-800 disabled:opacity-50 text-slate-300 transition-colors"
               >
                 Prev
               </button>
@@ -288,9 +288,9 @@ export default function TrainingProgram() {
                   <button
                     key={i + 1}
                     onClick={() => paginate(i + 1)}
-                    className={`px-3 py-1.5 border rounded-lg transition-colors ${
+                    className={`px-3 cursor-pointer py-1.5 border rounded-lg transition-colors ${
                       currentPage === i + 1 
-                        ? 'bg-emerald-500/20 border-emerald-500/30 text-emerald-400' 
+                        ? 'bg-emerald-500/20 cursor-pointer border-emerald-500/30 text-emerald-400' 
                         : 'border-slate-700 bg-slate-900 hover:bg-slate-800 text-slate-300'
                     }`}
                   >
@@ -302,7 +302,7 @@ export default function TrainingProgram() {
               <button 
                 onClick={() => paginate(currentPage + 1)}
                 disabled={currentPage === totalPages || totalPages === 0}
-                className="px-3 py-1.5 border border-slate-700 rounded-lg bg-slate-900 hover:bg-slate-800 disabled:opacity-50 text-slate-300 transition-colors"
+                className="px-3 py-1.5 cursor-pointer border border-slate-700 rounded-lg bg-slate-900 hover:bg-slate-800 disabled:opacity-50 text-slate-300 transition-colors"
               >
                 Next
               </button>
@@ -339,14 +339,14 @@ export default function TrainingProgram() {
               <button
                 onClick={() => setIsDeleteModalOpen(false)}
                 disabled={isDeleting}
-                className="px-5 py-2.5 text-sm font-bold text-slate-300 bg-slate-800 border border-slate-700 rounded-xl hover:bg-slate-700 transition-colors disabled:opacity-50 w-full"
+                className="px-5 py-2.5 cursor-pointer text-sm font-bold text-slate-300 bg-slate-800 border border-slate-700 rounded-xl hover:bg-slate-700 transition-colors disabled:opacity-50 w-full"
               >
                 Cancel
               </button>
               <button
                 onClick={executeDelete}
                 disabled={isDeleting}
-                className="px-5 py-2.5 text-sm font-bold text-white bg-rose-600 rounded-xl hover:bg-rose-500 shadow-lg shadow-rose-900/20 transition-all disabled:opacity-50 flex items-center justify-center w-full"
+                className="px-5 py-2.5 cursor-pointer text-sm font-bold text-white bg-rose-600 rounded-xl hover:bg-rose-500 shadow-lg shadow-rose-900/20 transition-all disabled:opacity-50 flex items-center justify-center w-full"
               >
                 {isDeleting ? <Loader2 className="w-4 h-4 mr-2 animate-spin" /> : <Trash2 className="w-4 h-4 mr-2" />}
                 {isDeleting ? "Deleting..." : "Delete"}

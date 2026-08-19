@@ -42,7 +42,7 @@ function CustomSelect({
         type="button"
         disabled={disabled}
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full rounded-xl cursor-pointer px-3.5 py-2.5 text-sm flex items-center justify-between transition-all disabled:opacity-50 disabled:cursor-not-allowed bg-white text-slate-900 border border-slate-200 hover:border-emerald-500 focus:ring-2 focus:ring-emerald-500 shadow-sm"
+        className="w-full rounded-xl cursor-pointer cursor-pointer px-3.5 py-2.5 text-sm flex items-center justify-between transition-all disabled:opacity-50 disabled:cursor-not-allowed bg-white text-slate-900 border border-slate-200 hover:border-emerald-500 focus:ring-2 focus:ring-emerald-500 shadow-sm"
       >
         <span className="truncate font-medium">{selectedOption?.label || "Select an option"}</span>
         <ChevronDown
@@ -63,7 +63,7 @@ function CustomSelect({
                   onChange(option.value);
                   setIsOpen(false);
                 }}
-                className={`w-full px-3.5 py-2.5 text-sm text-left transition-colors cursor-pointer flex items-center justify-between ${
+                className={`w-full px-3.5 py-2.5 text-sm cursor-pointer text-left transition-colors cursor-pointer flex items-center justify-between ${
                   isSelected ? "bg-emerald-50 text-emerald-700 font-bold" : "text-slate-700 hover:bg-slate-50"
                 }`}
               >
@@ -283,10 +283,10 @@ export default function PlayerUpgradeModal({ isOpen, onClose, onSuccess }: Playe
 
           {/* Footer */}
           <div className="p-6 border-t border-slate-100 bg-slate-50/50 shrink-0 flex gap-3">
-            <button type="button" onClick={onClose} disabled={isLoading} className="flex-1 py-3 px-4 bg-white hover:bg-slate-100 text-slate-700 text-sm font-bold border border-slate-200 rounded-xl transition-all disabled:opacity-50 shadow-sm">
+            <button type="button" onClick={onClose} disabled={isLoading} className="flex-1 cursor-pointer py-3 px-4 bg-white hover:bg-slate-100 text-slate-700 text-sm font-bold border border-slate-200 rounded-xl transition-all disabled:opacity-50 shadow-sm">
               Cancel
             </button>
-            <button type="submit" disabled={isLoading} className="flex-1 flex items-center justify-center py-3 px-4 bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-black rounded-xl shadow-lg shadow-emerald-600/20 transition-all disabled:opacity-50">
+            <button type="submit" disabled={isLoading} className="flex-1 flex items-center cursor-pointer justify-center py-3 px-4 bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-black rounded-xl shadow-lg shadow-emerald-600/20 transition-all disabled:opacity-50">
               {isLoading ? <><Loader2 className="w-5 h-5 animate-spin mr-2" /> Submitting...</> : "Register as Player"}
             </button>
           </div>

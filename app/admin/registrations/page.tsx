@@ -215,7 +215,7 @@ export default function RegistrationManagement() {
                       <div className="flex items-center justify-end">
                         <button 
                           onClick={() => handleView(item)}
-                          className="p-2 text-slate-400 hover:text-blue-400 hover:bg-blue-500/10 rounded-lg transition-colors" 
+                          className="p-2 text-slate-400 cursor-pointer hover:text-blue-400 hover:bg-blue-500/10 rounded-lg transition-colors" 
                           title="View Details"
                         >
                           <Eye className="w-4 h-4" />
@@ -246,7 +246,7 @@ export default function RegistrationManagement() {
               <button 
                 onClick={() => paginate(currentPage - 1)}
                 disabled={currentPage === 1}
-                className="px-3 py-1.5 border border-slate-700 rounded-lg bg-slate-900 hover:bg-slate-800 disabled:opacity-50 text-slate-300 transition-colors"
+                className="px-3 py-1.5 border cursor-pointer border-slate-700 rounded-lg bg-slate-900 hover:bg-slate-800 disabled:opacity-50 text-slate-300 transition-colors"
               >
                 Prev
               </button>
@@ -256,9 +256,9 @@ export default function RegistrationManagement() {
                   <button
                     key={i + 1}
                     onClick={() => paginate(i + 1)}
-                    className={`px-3 py-1.5 border rounded-lg transition-colors ${
+                    className={`px-3 py-1.5 cursor-pointer border rounded-lg transition-colors ${
                       currentPage === i + 1 
-                        ? 'bg-emerald-500/20 border-emerald-500/30 text-emerald-400' 
+                        ? 'bg-emerald-500/20 cursor-pointer border-emerald-500/30 text-emerald-400' 
                         : 'border-slate-700 bg-slate-900 hover:bg-slate-800 text-slate-300'
                     }`}
                   >
@@ -270,7 +270,7 @@ export default function RegistrationManagement() {
               <button 
                 onClick={() => paginate(currentPage + 1)}
                 disabled={currentPage === totalPages || totalPages === 0}
-                className="px-3 py-1.5 border border-slate-700 rounded-lg bg-slate-900 hover:bg-slate-800 disabled:opacity-50 text-slate-300 transition-colors"
+                className="px-3 py-1.5 border cursor-pointer border-slate-700 rounded-lg bg-slate-900 hover:bg-slate-800 disabled:opacity-50 text-slate-300 transition-colors"
               >
                 Next
               </button>

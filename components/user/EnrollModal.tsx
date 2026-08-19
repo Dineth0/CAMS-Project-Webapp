@@ -182,7 +182,7 @@ export default function EnrollModal({ isOpen, onClose, program, onSubmit }: Enro
           </div>
           <button 
             onClick={onClose} 
-            className="p-2 text-slate-400 hover:text-slate-700 hover:bg-slate-100 rounded-full transition-colors"
+            className="p-2 text-slate-400 cursor-pointer hover:text-slate-700 hover:bg-slate-100 rounded-full transition-colors"
           >
             <X className="w-5 h-5" />
           </button>
@@ -324,7 +324,7 @@ export default function EnrollModal({ isOpen, onClose, program, onSubmit }: Enro
           <button 
             type="button" 
             onClick={onClose} 
-            className="px-5 py-2.5 text-sm font-bold text-slate-700 bg-white border border-slate-200 rounded-xl hover:bg-slate-100 transition-colors shadow-sm"
+            className="px-5 py-2.5 text-sm cursor-pointer font-bold text-slate-700 bg-white border border-slate-200 rounded-xl hover:bg-slate-100 transition-colors shadow-sm"
           >
             Cancel
           </button>
@@ -332,7 +332,7 @@ export default function EnrollModal({ isOpen, onClose, program, onSubmit }: Enro
             type="submit" 
             form="enrollment-form" 
             disabled={isSubmitting}
-            className="flex items-center px-6 py-2.5 text-sm font-black text-white bg-emerald-600 rounded-xl hover:bg-emerald-700 shadow-md shadow-emerald-600/20 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+            className="flex items-center px-6 cursor-pointer py-2.5 text-sm font-black text-white bg-emerald-600 rounded-xl hover:bg-emerald-700 shadow-md shadow-emerald-600/20 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {isSubmitting ? "Processing..." : (
               <>

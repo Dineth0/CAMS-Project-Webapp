@@ -105,7 +105,7 @@ export default function TrainingProgramDetailsLightEpic() {
           <AlertCircle className="w-16 h-16 text-rose-500 mb-4 animate-bounce" />
           <h2 className="text-2xl font-black mb-2 text-slate-900">Program Not Found</h2>
           <p className="text-slate-600 font-medium text-sm mb-6">The training session you are looking for does not exist or has been removed.</p>
-          <button onClick={() => router.back()} className="w-full px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl font-black shadow-md shadow-emerald-600/20 transition-all">
+          <button onClick={() => router.back()} className="w-full cursor-pointer px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl font-black shadow-md shadow-emerald-600/20 transition-all">
             Back to Sessions
           </button>
         </div>
@@ -136,12 +136,12 @@ export default function TrainingProgramDetailsLightEpic() {
       <nav className="relative z-20 max-w-6xl mx-auto px-4 sm:px-6 pt-6 pb-4 flex items-center justify-between">
         <button 
           onClick={() => router.back()} 
-          className="group flex items-center gap-2 px-4 py-2.5 bg-white/80 backdrop-blur-md hover:bg-emerald-50 border border-slate-200 hover:border-emerald-300 shadow-sm rounded-2xl text-slate-800 hover:text-emerald-800 transition-all font-bold"
+          className="group flex items-center cursor-pointer gap-2 px-4 py-2.5 bg-white/80 backdrop-blur-md hover:bg-emerald-50 border border-slate-200 hover:border-emerald-300 shadow-sm rounded-2xl text-slate-800 hover:text-emerald-800 transition-all font-bold"
         >
           <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
           <span className="text-sm">Back</span>
         </button>
-        <div className="flex items-center gap-2 text-xs font-black uppercase tracking-widest bg-emerald-600 border border-emerald-500 text-white px-4 py-2 rounded-full shadow-md shadow-emerald-600/20">
+        <div className="flex items-center cursor-pointer gap-2 text-xs font-black uppercase tracking-widest bg-emerald-600 border border-emerald-500 text-white px-4 py-2 rounded-full shadow-md shadow-emerald-600/20">
           <Flame className="w-3.5 h-3.5 text-yellow-300" /> Pro Training Arena
         </div>
       </nav>
@@ -254,9 +254,9 @@ export default function TrainingProgramDetailsLightEpic() {
                   <button 
                     onClick={handleEnrollClick}
                     disabled={isButtonDisabled}
-                    className={`w-full py-4 px-4 rounded-2xl text-base font-black transition-all duration-300 shadow-lg mb-6 ${
+                    className={`w-full py-4 px-4 cursor-pointer rounded-2xl text-base font-black transition-all duration-300 shadow-lg mb-6 ${
                       isProgramFull
-                      ? "bg-slate-200/80 text-slate-500 border border-slate-300 cursor-not-allowed"
+                      ? "bg-slate-200/80 text-slate-500 cursor-pointer border border-slate-300 cursor-not-allowed"
                       : "bg-emerald-600 hover:bg-emerald-700 text-white shadow-emerald-600/25 active:scale-[0.98]"
                     }`}
                   >
@@ -289,10 +289,10 @@ export default function TrainingProgramDetailsLightEpic() {
                 <h3 className="text-xl font-black text-slate-900 mb-2">Player Account Needed</h3>
                 <p className="text-slate-500 text-sm mb-6 font-medium">Upgrade your account to a player profile to unlock training programs.</p>
                 <div className="flex gap-3">
-                  <button onClick={() => setIsWarningModalOpen(false)} className="flex-1 px-4 py-3 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl font-bold transition-colors shadow-sm">
+                  <button onClick={() => setIsWarningModalOpen(false)} className="flex-1 cursor-pointer px-4 py-3 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl font-bold transition-colors shadow-sm">
                     Cancel
                   </button>
-                  <button onClick={() => { setIsWarningModalOpen(false); setIsPlayerUpgradeModalOpen(true); }} className="flex-1 px-4 py-3 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl font-bold shadow-md shadow-emerald-600/20 transition-all">
+                  <button onClick={() => { setIsWarningModalOpen(false); setIsPlayerUpgradeModalOpen(true); }} className="flex-1 cursor-pointer px-4 py-3 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl font-bold shadow-md shadow-emerald-600/20 transition-all">
                     Upgrade
                   </button>
                 </div>

@@ -82,7 +82,7 @@ export default function Dashboard() {
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 border-b border-slate-800 pb-5">
         <div>
           <h1 className="text-2xl font-bold text-slate-100">Dashboard Overview</h1>
-          <p className="text-sm text-slate-400 mt-1">Welcome back, {user?.name || 'Admin'}. Here is what's happening today.</p>
+          <p className="text-sm text-slate-400 mt-1">Welcome back, {user?.userName || 'Admin'}. Here is what is happening today.</p>
         </div>
       </div>
 
@@ -200,11 +200,7 @@ export default function Dashboard() {
             )}
           </div>
 
-          <div className="mt-auto p-5 border-t border-slate-800">
-            <button className="w-full py-2.5 rounded-xl border-2 border-dashed border-slate-700 text-slate-400 hover:text-slate-200 hover:bg-slate-800/60 hover:border-slate-600 transition-all text-sm font-bold flex items-center justify-center">
-              Create New Program
-            </button>
-          </div>
+          
         </div>
 
       </div>

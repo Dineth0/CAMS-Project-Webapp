@@ -137,7 +137,7 @@ export default function PlayersManagement() {
       </div>
 
       {/* Toolbar */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-slate-900 p-4 rounded-2xl border border-slate-800 shadow-lg">
+      <div className="flex flex-col sm:flex-row sm:items-center gap-4 bg-slate-900 p-4 rounded-2xl border border-slate-800 shadow-lg">
         <div className="relative w-full sm:w-96">
           <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none">
             <Search className="h-4 w-4 text-slate-500" />
@@ -151,13 +151,7 @@ export default function PlayersManagement() {
           />
         </div>
 
-        <button 
-          onClick={() => setIsAddModalOpen(true)}
-          className="flex items-center justify-center w-full sm:w-auto px-5 py-2.5 bg-emerald-600 text-white rounded-xl text-sm font-bold hover:bg-emerald-500 shadow-lg shadow-emerald-900/20 transition-all shrink-0"
-        >
-          <Plus className="w-4 h-4 mr-2" />
-          Add New Player
-        </button>
+        
       </div>
 
       {/* Data Table */}
@@ -259,7 +253,7 @@ export default function PlayersManagement() {
                         {/* VIEW Button */}
                         <button 
                           onClick={() => handleViewPlayer(player)}
-                          className="p-2 text-slate-400 hover:text-blue-400 hover:bg-blue-500/10 rounded-lg transition-colors" 
+                          className="p-2 cursor-pointer text-slate-400 hover:text-blue-400 hover:bg-blue-500/10 rounded-lg transition-colors" 
                           title="View Profile"
                         >
                           <Eye className="w-4 h-4" />
@@ -267,7 +261,7 @@ export default function PlayersManagement() {
                         {/* DELETE Button */}
                         <button 
                           onClick={() => confirmDelete(player.id)}
-                          className="p-2 text-slate-400 hover:text-rose-400 hover:bg-rose-500/10 rounded-lg transition-colors" 
+                          className="p-2 cursor-pointer text-slate-400 hover:text-rose-400 hover:bg-rose-500/10 rounded-lg transition-colors" 
                           title="Delete"
                         >
                           <Trash2 className="w-4 h-4" />
@@ -292,7 +286,7 @@ export default function PlayersManagement() {
               <button 
                 onClick={() => paginate(currentPage - 1)}
                 disabled={currentPage === 1}
-                className="px-3 py-1.5 border border-slate-700 rounded-lg bg-slate-900 hover:bg-slate-800 disabled:opacity-50 text-slate-300 transition-colors"
+                className="px-3 cursor-pointer py-1.5 border border-slate-700 rounded-lg bg-slate-900 hover:bg-slate-800 disabled:opacity-50 text-slate-300 transition-colors"
               >
                 Prev
               </button>
@@ -302,9 +296,9 @@ export default function PlayersManagement() {
                   <button
                     key={i + 1}
                     onClick={() => paginate(i + 1)}
-                    className={`px-3 py-1.5 border rounded-lg transition-colors ${
+                    className={`px-3 cursor-pointer py-1.5 border rounded-lg transition-colors ${
                       currentPage === i + 1 
-                        ? 'bg-emerald-500/20 border-emerald-500/30 text-emerald-400' 
+                        ? 'bg-emerald-500/20 cursor-pointer border-emerald-500/30 text-emerald-400' 
                         : 'border-slate-700 bg-slate-900 hover:bg-slate-800 text-slate-300'
                     }`}
                   >
@@ -316,7 +310,7 @@ export default function PlayersManagement() {
               <button 
                 onClick={() => paginate(currentPage + 1)}
                 disabled={currentPage === totalPages || totalPages === 0}
-                className="px-3 py-1.5 border border-slate-700 rounded-lg bg-slate-900 hover:bg-slate-800 disabled:opacity-50 text-slate-300 transition-colors"
+                className="px-3 py-1.5 cursor-pointer border border-slate-700 rounded-lg bg-slate-900 hover:bg-slate-800 disabled:opacity-50 text-slate-300 transition-colors"
               >
                 Next
               </button>
@@ -354,14 +348,14 @@ export default function PlayersManagement() {
               <button
                 onClick={() => setIsDeleteModalOpen(false)}
                 disabled={isDeleting}
-                className="px-5 py-2.5 text-sm font-bold text-slate-300 bg-slate-800 border border-slate-700 rounded-xl hover:bg-slate-700 transition-colors disabled:opacity-50 w-full"
+                className="px-5 py-2.5 cursor-pointer text-sm font-bold text-slate-300 bg-slate-800 border border-slate-700 rounded-xl hover:bg-slate-700 transition-colors disabled:opacity-50 w-full"
               >
                 Cancel
               </button>
               <button
                 onClick={executeDelete}
                 disabled={isDeleting}
-                className="px-5 py-2.5 text-sm font-bold text-white bg-rose-600 rounded-xl hover:bg-rose-500 shadow-lg shadow-rose-900/20 transition-all disabled:opacity-50 flex items-center justify-center w-full"
+                className="px-5 py-2.5 cursor-pointer text-sm font-bold text-white bg-rose-600 rounded-xl hover:bg-rose-500 shadow-lg shadow-rose-900/20 transition-all disabled:opacity-50 flex items-center justify-center w-full"
               >
                 {isDeleting ? <Loader2 className="w-4 h-4 mr-2 animate-spin" /> : <Trash2 className="w-4 h-4 mr-2" />}
                 {isDeleting ? "Deleting..." : "Delete"}

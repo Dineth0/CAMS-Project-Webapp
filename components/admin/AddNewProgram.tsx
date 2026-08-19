@@ -127,7 +127,7 @@ export default function AddProgramModal({ isOpen, onClose, onSubmit, editProgram
           </div>
           <button 
             onClick={onClose}
-            className="p-2 text-slate-400 hover:text-slate-200 hover:bg-slate-800 rounded-full transition-colors"
+            className="p-2 text-slate-400 cursor-pointer hover:text-slate-200 hover:bg-slate-800 rounded-full transition-colors"
           >
             <X className="w-5 h-5" />
           </button>
@@ -296,7 +296,7 @@ export default function AddProgramModal({ isOpen, onClose, onSubmit, editProgram
             type="button"
             onClick={onClose}
             disabled={isSubmitting}
-            className="px-5 py-2.5 text-sm font-bold text-slate-300 bg-slate-900 border border-slate-700 rounded-xl hover:bg-slate-800 transition-colors disabled:opacity-50"
+            className="px-5 py-2.5 text-sm cursor-pointer font-bold text-slate-300 bg-slate-900 border border-slate-700 rounded-xl hover:bg-slate-800 transition-colors disabled:opacity-50"
           >
             Cancel
           </button>
@@ -304,7 +304,7 @@ export default function AddProgramModal({ isOpen, onClose, onSubmit, editProgram
             type="submit"
             form="program-form"
             disabled={isSubmitting}
-            className="px-5 py-2.5 text-sm font-bold text-white bg-emerald-600 rounded-xl hover:bg-emerald-500 shadow-lg shadow-emerald-900/20 transition-all disabled:opacity-50"
+            className="px-5 py-2.5 text-sm font-bold cursor-pointer text-white bg-emerald-600 rounded-xl hover:bg-emerald-500 shadow-lg shadow-emerald-900/20 transition-all disabled:opacity-50"
           >
             {isSubmitting ? "Saving..." : editProgram ? "Update Program" : "Save Program"}
           </button>
@@ -315,7 +315,6 @@ export default function AddProgramModal({ isOpen, onClose, onSubmit, editProgram
   );
 }
 
-// CustomSelect Component
 function CustomSelect({
   value,
   onChange,
@@ -347,7 +346,7 @@ function CustomSelect({
         type="button"
         disabled={disabled}
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full rounded-xl cursor-pointer px-3.5 py-2.5 text-sm flex items-center justify-between transition-all disabled:opacity-50 disabled:cursor-not-allowed bg-slate-950/50 text-white border border-slate-700 focus:ring-2 focus:ring-emerald-500"
+        className="w-full rounded-xl cursor-pointer cursor-pointer px-3.5 py-2.5 text-sm flex items-center justify-between transition-all disabled:opacity-50 disabled:cursor-not-allowed bg-slate-950/50 text-white border border-slate-700 focus:ring-2 focus:ring-emerald-500"
       >
         <span className="truncate font-medium">{selectedOption?.label || "Select an option"}</span>
         <ChevronDown
@@ -368,7 +367,7 @@ function CustomSelect({
                   onChange(option.value);
                   setIsOpen(false);
                 }}
-                className={`w-full px-3.5 py-2.5 text-sm text-left transition-colors cursor-pointer flex items-center justify-between ${
+                className={`w-full px-3.5 cursor-pointer py-2.5 text-sm text-left transition-colors cursor-pointer flex items-center justify-between ${
                   isSelected ? "bg-emerald-500/10 text-emerald-400 font-semibold" : "text-white hover:bg-slate-800"
                 }`}
               >

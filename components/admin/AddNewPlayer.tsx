@@ -52,7 +52,7 @@ export default function AddPlayerModal({ isOpen, onClose, onSubmit }: AddPlayerM
             <h2 className="text-xl font-bold text-slate-100">Register New Player</h2>
             <p className="text-xs text-slate-400 mt-1">Add a new player profile to the system.</p>
           </div>
-          <button onClick={onClose} className="p-2 text-slate-400 hover:text-slate-200 hover:bg-slate-800 rounded-full transition-colors">
+          <button onClick={onClose} className="p-2 cursor-pointer text-slate-400 hover:text-slate-200 hover:bg-slate-800 rounded-full transition-colors">
             <X className="w-5 h-5" />
           </button>
         </div>
@@ -96,7 +96,7 @@ export default function AddPlayerModal({ isOpen, onClose, onSubmit }: AddPlayerM
                     name="gender" 
                     value={formData.gender} 
                     onChange={handleChange} 
-                    className="w-full px-4 py-2.5 bg-slate-950/50 border border-slate-700 rounded-xl text-sm text-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:bg-slate-900 transition-all shadow-inner"
+                    className="w-full px-4 cursor-pointer py-2.5 bg-slate-950/50 border border-slate-700 rounded-xl text-sm text-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:bg-slate-900 transition-all shadow-inner"
                   >
                     <option value="MALE" className="bg-slate-900">Male</option>
                     <option value="FEMALE" className="bg-slate-900">Female</option>
@@ -113,7 +113,7 @@ export default function AddPlayerModal({ isOpen, onClose, onSubmit }: AddPlayerM
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                 <div>
-                  <label className="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-1.5">Email Address</label>
+                  <label className="block text-xs cursor-pointerfont-bold uppercase tracking-wider text-slate-400 mb-1.5">Email Address</label>
                   <input 
                     type="email" 
                     name="email" 
@@ -163,7 +163,7 @@ export default function AddPlayerModal({ isOpen, onClose, onSubmit }: AddPlayerM
                     name="playingRole" 
                     value={formData.playingRole} 
                     onChange={handleChange} 
-                    className="w-full px-4 py-2.5 bg-slate-950/50 border border-slate-700 rounded-xl text-sm text-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:bg-slate-900 transition-all shadow-inner"
+                    className="w-full px-4 py-2.5 cursor-pointer bg-slate-950/50 border border-slate-700 rounded-xl text-sm text-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:bg-slate-900 transition-all shadow-inner"
                   >
                     <option value="BATSMAN" className="bg-slate-900">Batsman</option>
                     <option value="BOWLER" className="bg-slate-900">Bowler</option>
@@ -177,7 +177,7 @@ export default function AddPlayerModal({ isOpen, onClose, onSubmit }: AddPlayerM
                     name="experienceLevel" 
                     value={formData.experienceLevel} 
                     onChange={handleChange} 
-                    className="w-full px-4 py-2.5 bg-slate-950/50 border border-slate-700 rounded-xl text-sm text-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:bg-slate-900 transition-all shadow-inner"
+                    className="w-full px-4 py-2.5 cursor-pointer bg-slate-950/50 border border-slate-700 rounded-xl text-sm text-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:bg-slate-900 transition-all shadow-inner"
                   >
                     <option value="BEGINNER" className="bg-slate-900">Beginner</option>
                     <option value="CLUB_LEVEL" className="bg-slate-900">Club Level</option>
@@ -190,7 +190,7 @@ export default function AddPlayerModal({ isOpen, onClose, onSubmit }: AddPlayerM
                     name="battingStyle" 
                     value={formData.battingStyle} 
                     onChange={handleChange} 
-                    className="w-full px-4 py-2.5 bg-slate-950/50 border border-slate-700 rounded-xl text-sm text-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:bg-slate-900 transition-all shadow-inner"
+                    className="w-full px-4 py-2.5 cursor-pointer bg-slate-950/50 border border-slate-700 rounded-xl text-sm text-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:bg-slate-900 transition-all shadow-inner"
                   >
                     <option value="RIGHT_HAND" className="bg-slate-900">Right Hand</option>
                     <option value="LEFT_HAND" className="bg-slate-900">Left Hand</option>
@@ -202,7 +202,7 @@ export default function AddPlayerModal({ isOpen, onClose, onSubmit }: AddPlayerM
                     name="bowlingStyle" 
                     value={formData.bowlingStyle} 
                     onChange={handleChange} 
-                    className="w-full px-4 py-2.5 bg-slate-950/50 border border-slate-700 rounded-xl text-sm text-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:bg-slate-900 transition-all shadow-inner"
+                    className="w-full px-4 py-2.5 cursor-pointer bg-slate-950/50 border border-slate-700 rounded-xl text-sm text-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:bg-slate-900 transition-all shadow-inner"
                   >
                     <option value="RIGHT_ARM_FAST" className="bg-slate-900">Right Arm Fast</option>
                     <option value="RIGHT_ARM_SPIN" className="bg-slate-900">Right Arm Spin</option>
@@ -223,14 +223,14 @@ export default function AddPlayerModal({ isOpen, onClose, onSubmit }: AddPlayerM
           <button 
             type="button" 
             onClick={onClose} 
-            className="px-5 py-2.5 text-sm font-bold text-slate-300 bg-slate-900 border border-slate-700 rounded-xl hover:bg-slate-800 transition-colors"
+            className="px-5 py-2.5 text-sm cursor-pointer font-bold text-slate-300 bg-slate-900 border border-slate-700 rounded-xl hover:bg-slate-800 transition-colors"
           >
             Cancel
           </button>
           <button 
             type="submit" 
             form="add-player-form" 
-            className="px-5 py-2.5 text-sm font-bold text-white bg-emerald-600 rounded-xl hover:bg-emerald-500 shadow-lg shadow-emerald-900/20 transition-all"
+            className="px-5 py-2.5 text-sm cursor-pointer font-bold text-white bg-emerald-600 rounded-xl hover:bg-emerald-500 shadow-lg shadow-emerald-900/20 transition-all"
           >
             Register Player
           </button>

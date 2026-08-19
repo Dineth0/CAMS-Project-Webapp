@@ -138,7 +138,7 @@ export default function LoginPage() {
             <button
               type="submit"
               disabled={isLoading}
-              className="w-full flex items-center justify-center py-3 px-4 border border-transparent rounded-xl shadow-sm text-sm font-bold text-white bg-emerald-600 hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500 transition-all hover:shadow-lg hover:shadow-emerald-600/30 mt-6 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full cursor-pointer flex items-center justify-center py-3 px-4 border border-transparent rounded-xl shadow-sm text-sm font-bold text-white bg-emerald-600 hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500 transition-all hover:shadow-lg hover:shadow-emerald-600/30 mt-6 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {isLoading ? "Signing In..." : "Sign In"}
               {!isLoading && <ArrowRight className="ml-2 h-4 w-4" />}
@@ -148,7 +148,7 @@ export default function LoginPage() {
           {/* Toggle Link */}
           <div className="mt-8 text-center text-sm text-slate-600">
             Don't have an account?{" "}
-            <Link href="/signup" className="font-bold text-emerald-600 hover:text-emerald-500 transition-colors">
+            <Link href="/signup" className="font-bold cursor-pointer text-emerald-600 hover:text-emerald-500 transition-colors">
               Register here
             </Link>
           </div>
