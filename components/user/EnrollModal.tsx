@@ -176,7 +176,7 @@ export default function EnrollModal({ isOpen, onClose, program, onSubmit }: Enro
           <div>
             <h2 className="text-xl font-black text-slate-900 flex items-center">
               <ShieldCheck className="w-5 h-5 text-emerald-600 mr-2" />
-              Enroll Player
+              Register for the training program
             </h2>
             <p className="text-xs text-slate-500 mt-1 font-medium">Complete the details to register for the program.</p>
           </div>
